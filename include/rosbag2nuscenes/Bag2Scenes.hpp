@@ -31,7 +31,7 @@
 #include <thread>
 #include <mutex>
 #include <condition_variable>
-
+#include <random>
 namespace fs = std::filesystem;
 
 class Bag2Scenes {
@@ -42,7 +42,7 @@ class Bag2Scenes {
 
     private:
 
-        std::string generateToken();
+        std::string generateToken() const;
 
         std::vector<float> splitString(std::string str);
 
@@ -99,7 +99,9 @@ class Bag2Scenes {
         indicators::BlockProgressBar odometry_bar_;
         indicators::BlockProgressBar sensor_data_bar_;
         indicators::MultiProgress<indicators::BlockProgressBar, 2> progress_bars_;
-        
+        mutable std::random_device rd_;
+        mutable std::mt19937 rng_{rd_()};
+        mutable std::uniform_int_distribution<int> dist_{0, 15};
 };
 
 

@@ -61,7 +61,7 @@ struct RadarMessageT : SensorMessageT {
 };
 
 struct LidarMessageT : SensorMessageT {
-    pcl::PointCloud<pcl::PointXYZI> cloud;
+    pcl::PointCloud<pcl::PointXYZ> cloud;
 };
 
 struct CameraMessageT : SensorMessageT {

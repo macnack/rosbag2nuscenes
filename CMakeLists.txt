@@ -7,6 +7,7 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
@@ -27,6 +28,8 @@ find_package(pcl_ros REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(yaml-cpp REQUIRED)
+find_package(tf2_msgs REQUIRED)
+
 
 include_directories(
     ${OpenCV_INCLUDE_DIRS}

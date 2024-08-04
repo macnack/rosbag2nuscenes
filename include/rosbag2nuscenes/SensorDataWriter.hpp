@@ -31,6 +31,7 @@ class SensorDataWriter {
 
         void writeLidarData(LidarMessageT msg, fs::path filename);
         
+        void writeLidarDataBinary(LidarMessageT msg, fs::path filename);
         void writeCameraData(CameraMessageT msg, fs::path filename);
         
         void writeFile();

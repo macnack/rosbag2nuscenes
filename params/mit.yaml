@@ -1,39 +1,15 @@
 BAG_INFO:
-  TEAM: MIT-PITT-RW
-  DESCRIPTION: Low speed multi-agent laps with KAIST
-  ODOM_TOPIC: /vehicle_8/local_odometry
-  TRACK: IMS
+  TEAM: IRIM-PP-TEAM
+  DESCRIPTION: MELEX BEV dataset
+  ODOM_TOPIC: /tf
+  TRACK: PP
   URDF: urdf/av21.urdf
+  STORAGE: "sqlite3"
 SENSOR_INFO:
-  LIDAR_FRONT:
-    TOPIC: /luminar_front_points
-    FRAME: luminar_front
-  LIDAR_LEFT:
-    TOPIC: /luminar_left_points
-    FRAME: luminar_left
-  LIDAR_RIGHT:
-    TOPIC: /luminar_right_points
-    FRAME: luminar_right
   CAMERA_FRONT_LEFT:
-    TOPIC: /camera/front_left/image/compressed
-    FRAME: camera_front_left
-    CALIB: /camera/front_left/camera_info
-  CAMERA_FRONT_LEFT_CENTER:
-    TOPIC: /camera/front_left_center/image/compressed
-    FRAME: camera_front_1
-    CALIB: /camera/front_left_center/camera_info
-  CAMERA_FRONT_RIGHT:
-    TOPIC: /camera/front_right/image/compressed
-    FRAME: camera_front_right
-    CALIB: /camera/front_right/camera_info
-  CAMERA_REAR_LEFT:
-    TOPIC: /camera/rear_left/image/compressed
-    FRAME: camera_rear_left
-    CALIB: /camera/rear_left/camera_info
-  CAMERA_REAR_RIGHT:
-    TOPIC: /camera/rear_right/image/compressed
-    FRAME: camera_rear_right
-    CALIB: /camera/rear_right/camera_info
-  RADAR_FRONT:
-    TOPIC: /radar_front/esr_track
-    FRAME: radar_front
+    TOPIC: /sensing/camera/front/image_raw
+    FRAME: camera_front_link
+    CALIB: /sensing/camera/front/camera_info
+  # LIDAR_FRONT:
+  #   TOPIC: /sensing/lidar/concatenated/pointcloud
+  #   FRAME: base_link

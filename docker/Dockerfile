@@ -18,7 +18,7 @@ RUN mkdir -p /colcon_ws/src
 
 WORKDIR /colcon_ws/src
 
-RUN git clone https://github.com/astuff/astuff_sensor_msgs -b dashing-devel
+RUN git clone https://github.com/astuff/astuff_sensor_msgs
 
 WORKDIR /colcon_ws
 
